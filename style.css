@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #dff5df;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 100%;
+    max-width: 450px;
+    min-height: 100vh;
+    background: #f7fff7;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+/* HEADER */
+
+header {
+    background: #126b38;
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 25px 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* CAMPO */
+
+.golf-course {
+    padding: 20px;
+}
+
+.grass {
+    height: 430px;
+    border-radius: 30px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #3fa85b,
+            #3fa85b 35px,
+            #379b51 35px,
+            #379b51 70px
+        );
+
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,.2);
+}
+
+
+/* BANDERA */
+
+.flag {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 45px;
+}
+
+
+/* HOYO */
+
+.hole {
+    position: absolute;
+    top: 70px;
+    right: 52px;
+
+    width: 35px;
+    height: 20px;
+
+    background: #111;
+    border-radius: 50%;
+
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+}
+
+
+/* PELOTA */
+
+.ball {
+    position: absolute;
+
+    bottom: 35px;
+    left: 45%;
+
+    font-size: 35px;
+
+    transition:
+        all 1s cubic-bezier(.2,.8,.3,1);
+}
+
+
+/* CONTROLES */
+
+.controls {
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.controls h2 {
+    color: #174d2d;
+    margin-bottom: 15px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #19a34a;
+}
+
+.power-text {
+    margin: 10px;
+    font-weight: bold;
+}
+
+#hitButton {
+    width: 100%;
+    border: none;
+
+    background: #f5a623;
+    color: white;
+
+    padding: 17px;
+
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 0 #c77d0c;
+}
+
+#hitButton:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #c77d0c;
+}
+
+
+/* MARCADOR */
+
+.scoreboard {
+    padding: 20px 25px;
+}
+
+.scoreboard h2 {
+    margin-bottom: 15px;
+    color: #174d2d;
+}
+
+.score-card {
+    background: white;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.score-card div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-card span {
+    color: #777;
+    font-size: 13px;
+}
+
+.score-card strong {
+    font-size: 25px;
+    color: #126b38;
+}
+
+
+/* MENÚ */
+
+nav {
+    position: fixed;
+
+    bottom: 0;
+
+    width: 100%;
+    max-width: 450px;
+
+    background: white;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 12px;
+
+    box-shadow: 0 -3px 15px rgba(0,0,0,.15);
+}
+
+nav button {
+    border: none;
+    background: none;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    color: #126b38;
+
+    font-size: 20px;
+}
+
+nav span {
+    font-size: 12px;
+}

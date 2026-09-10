@@ -1,12 +1,122 @@
-<html lang = "en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title">Document</title>
+
+    <title>Golfito</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <H1>Aqui va golfit</H1>
-    <script src="script.js"> </script>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header>
+            <h1>🏌️ Golfito</h1>
+
+            <div class="score">
+                <span>Hoyo: <b id="hole">1</b></span>
+                <span>Golpes: <b id="shots">0</b></span>
+            </div>
+        </header>
+
+
+        <!-- CAMPO -->
+        <main>
+
+            <div class="golf-course">
+
+                <div class="grass">
+
+                    <!-- BANDERA -->
+                    <div class="flag">
+                        🚩
+                    </div>
+
+                    <!-- HOYO -->
+                    <div class="hole">
+                    </div>
+
+                    <!-- PELOTA -->
+                    <div id="ball" class="ball">
+                        ⚪
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTROLES -->
+            <section class="controls">
+
+                <h2>¡Golpea la pelota!</h2>
+
+                <input
+                    type="range"
+                    id="power"
+                    min="10"
+                    max="100"
+                    value="50"
+                >
+
+                <div class="power-text">
+                    Potencia: <span id="powerValue">50</span>%
+                </div>
+
+                <button id="hitButton">
+                    🏌️ GOLPEAR
+                </button>
+
+            </section>
+
+
+            <!-- MARCADOR -->
+            <section class="scoreboard">
+
+                <h2>🏆 Marcador</h2>
+
+                <div class="score-card">
+
+                    <div>
+                        <span>Hoyo</span>
+                        <strong id="scoreHole">1</strong>
+                    </div>
+
+                    <div>
+                        <span>Golpes</span>
+                        <strong id="scoreShots">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Par</span>
+                        <strong>3</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- MENÚ -->
+        <nav>
+
+            <button>🏠<span>Inicio</span></button>
+
+            <button>🏆<span>Ranking</span></button>
+
+            <button>⚙️<span>Ajustes</span></button>
+
+        </nav>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
